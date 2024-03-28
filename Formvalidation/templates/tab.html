@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{url_for('static',filename='navstyle1.css')}}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{url_for('static',filename='login.css')}}"
+    />
+    <link
+    rel="stylesheet"
+    type="text/css"
+    href="{{url_for('static',filename='table.css')}}"
+  />
+
+    <title>Products</title>
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <a href="#">Home</a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="">Home</a></li>
+        <li><a href="{{url_for('add')}}">Add</a></li>
+        <li><a href="{{url_for('logout')}}">Logout</a></li>
+      </ul>
+    </nav>
+    <div >
+        <table
+          border="all"
+          style="border-collapse: collapse; border: solid"
+          class="glassmorphic-form">
+          <tr>
+            <th>No</th>
+            <th>Name</th>
+            <th>ProductName</th>
+            <th>Quantity</th>
+            <th>Price</th>
+          </tr>
+          {% for i in data %}
+          <tr>
+            <td>{{i[0]}}</td>
+            <td>{{i[1]}}</td>
+            <td>{{i[2]}}</td>
+            <td>{{i[3]}}</td>
+            <td>{{i[4]}}</td>
+          </tr>
+          {% endfor %}
+        </table>
+    </div>
+  </body>
+</html>

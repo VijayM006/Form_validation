@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='navstyle1.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{url_for('static',filename='login.css')}}">
+
+    <title>Add form</title>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <a href="#">Home</a>
+        </div>
+        <ul class="nav-links">
+            <li><a href="{{url_for('home')}}">Home</a></li>
+            <li><a href="{{url_for('login')}}">Login</a></li>
+            <li><a href="{{url_for('signup')}}">Signup</a></li>
+            <li><a href="{{url_for('logout')}}">Logout</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <form action="" method="post" class="glassmorphic-form">
+            {{form.hiddentag}}
+           <div class="input-container">
+            <label for="Name">{{form.Name.label}}</label>
+            {{form.Name(size=20)}}<br>
+            <label for="ProductName">{{form.ProductName.label}}</label>
+            {{form.ProductName(size=20)}}<br>    
+            <label for="Quantity">{{form.Quantity.label}}</label>
+            {{form.Price(size=20)}}<br>
+            <label for="Price">{{form.Price.label}}</label>
+            {{form.Quantity(size=20)}}<br>
+            <button value="submit">Submit</button>
+           </div>
+    
+        </form>
+    </div>
+    
+</body>
+</html>

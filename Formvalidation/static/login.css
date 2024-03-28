@@ -1,0 +1,71 @@
+body {
+    font: 1em/1.618 Inter, sans-serif;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    min-height: 100vh;
+    padding: 30px;
+    margin: 0;
+  
+    color: #224;
+    background: url(https://source.unsplash.com/E8Ufcyxz514/2400x1823) center /
+      cover no-repeat fixed;
+  }
+  
+  .container {
+    width: 300px;
+  }
+  
+  .glassmorphic-form {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .glassmorphic-form h2 {
+    color: #fff;
+    text-align: center;
+  }
+  
+  .input-container {
+    margin-bottom: 20px;
+  }
+  
+  .input-container label {
+    color: #fff;
+  }
+  
+  .input-container input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    outline: none;
+  }
+  
+  input::placeholder {
+    color: #fff;
+    opacity: 0.7;
+  }
+  
+  button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: linear-gradient(to right, #4CAF50, #4CAF50, #4CAF50, #4CAF50);
+    color: #fff;
+    cursor: pointer;
+    outline: none;
+  }
+  
+  button:hover {
+    background: linear-gradient(to right, #45a049, #45a049, #45a049, #45a049);
+  }
+  
